@@ -30,9 +30,11 @@ contract Resolver {
         uint256 currentCycleStart = tokeManager.getCurrentCycle();
         uint256 currentCycleIndex = tokeManager.getCurrentCycleIndex();
         uint256 nextCycleStart = currentCycleStart + duration;
+        uint256 offset = 2; // used to give the contract an opportunity to perform this function itself
 
         canExec =
-            block.timestamp + timeLeftToRequestWithdrawal >= nextCycleStart &&
+            block.timestamp + (timeLeftToRequestWithdrawal / offset) >=
+            nextCycleStart &&
             currentCycleIndex > lastTokeCycleIndex &&
             requestWithdrawalAmount > 0;
 

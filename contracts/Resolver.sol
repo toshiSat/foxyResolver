@@ -33,7 +33,7 @@ contract Resolver {
 
         canExec =
             block.timestamp + timeLeftToRequestWithdrawal >= nextCycleStart &&
-            currentCycleIndex >= lastTokeCycleIndex &&
+            currentCycleIndex > lastTokeCycleIndex &&
             requestWithdrawalAmount > 0;
 
         return (canExec, execPayload);

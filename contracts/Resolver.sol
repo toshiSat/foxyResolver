@@ -38,6 +38,10 @@ contract Resolver {
             currentCycleIndex > lastTokeCycleIndex &&
             requestWithdrawalAmount > 0;
 
+        execPayload = abi.encodeWithSelector(
+            IStakingContract.sendWithdrawalRequests.selector
+        );
+
         return (canExec, execPayload);
     }
 }

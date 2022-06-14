@@ -32,7 +32,6 @@ module.exports = {
       chainId: 1,
       forking: {
         url: "https://eth-mainnet.alchemyapi.io/v2/CDf_84N-bbVsyODpzmL_ahJwyrZvsTb7",
-        blockNumber: 14540729,
         enabled: true, // Set to false to disable forked mainnet mode
       },
     },

@@ -5,4 +5,5 @@ interface IStakingContract {
     function timeLeftToRequestWithdrawal() external view returns (uint256);
     function lastTokeCycleIndex() external view returns (uint256);
     function requestWithdrawalAmount() external view returns (uint256);
+    function sendWithdrawalRequests() external;
 }

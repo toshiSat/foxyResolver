@@ -11,6 +11,7 @@
     "test": "yarn hardhat test"
   },
   "dependencies": {
+    "dotenv": "^16.0.1",
     "hardhat": "^2.9.3"
   },
   "devDependencies": {
